@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --teal: #186F65;
+    --green: #B5CB99;
+    --yellow: #FCE09B;
+    --maroon: #B2533E;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* awal atas */
+
+.atas {
+    width: 100vw;
+    height: 60px;
+    background-color: var(--teal);
+    display: flex;
+    box-shadow: 0 0 5px black;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+}
+
+.judul {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: var(--yellow);
+}
+
+.navbar {
+    display: grid;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 18px;
+    display: block;
+    height: 60px;
+    padding: 20px;
+}
+
+.navbar nav ul li a:hover, .navbar nav ul li a:focus {
+    background-color: var(--green);
+}
+
+@media screen and (max-width: 960px) {
+    .judul {
+        margin-left: 50px;
+    }
+
+    #icon {
+        width: 30px;
+        position: absolute;
+        left: 0;
+        margin-left: 10px;
+        cursor: pointer;
+        margin-bottom: 3px;
+    }
+
+    #icon span {
+        background-color: var(--yellow);
+        width: 100%;
+        height: 5px;
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        transition: 0.4s;
+    }
+
+    .buka-menu #icon .line-1 {
+        transform: translate(0, 5px) rotate(45deg);
+    }
+
+    .buka-menu #icon .line-2 {
+        display: none;
+    }
+
+    .buka-menu #icon .line-3 {
+        transform: translate(0, -5px) rotate(-45deg);
+    }
+
+    .navbar nav {
+        background-color: var(--teal);
+        position: absolute;
+        margin-top: 240px;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 5px 5px -3px black;
+        display: none;
+    }
+
+    .buka-menu nav {
+        display: inline-block;
+    }
+
+    .navbar nav li {
+        display: block;
+    }
+
+    .navbar nav li a {
+        text-align: center;
+    }
+
+    .navbar nav li a:hover, .navbar nav li a:focus {
+        background-color: var(--green);
+    }
+}
+
+.pendaftaran {
+    position: absolute;
+    right: 10px;
+}
+
+.pendaftaran a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#login {
+    color: var(--yellow);
+}
+
+#register {
+    color: var(--teal);
+    background-color: var(--yellow);
+}
+
+#login:hover, #login:focus {
+    background-color: var(--green);
+    color: var(--yellow);
+}
+
+#register:hover, #register:focus {
+    background-color: var(--green);
+    color: var(--yellow);
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        display: flex;
+    }
+
+    .navbar nav {
+        top: -180px;
+        height: 240px;
+    }
+
+    .pendaftaran {
+        top: 240px;
+        display: none;
+        width: 100%;
+    }
+    
+    .buka-menu .pendaftaran {
+        display: inline-flex;
+        justify-content: center;
+    }
+}
+
+/* akhir atas */
+
+.tengah {
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.data {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+.data >div {    
+    background-image: linear-gradient(to bottom right, var(--green), var(--yellow));
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
+    margin: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.data div h2 {
+    font-size: 28px;
+    color: var(--teal);
+    height: 22px;
+    position: absolute;
+    margin-top: 2px;
+}
+
+.data div h1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 7px;
+    color: var(--teal);
+}
+
+@media screen and (max-width: 776px) {
+    .data {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    }
+}
