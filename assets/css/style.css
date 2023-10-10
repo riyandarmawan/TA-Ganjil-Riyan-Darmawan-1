@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --teal: #186F65;
+    --green: #B5CB99;
+    --yellow: #FCE09B;
+    --maroon: #B2533E;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* awal atas */
+
+.atas {
+    width: 100vw;
+    height: 60px;
+    background-color: var(--teal);
+    display: flex;
+    box-shadow: 0 0 5px black;
+    position: fixed;
+    top: 0;
+}
+
+.nav-ver {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-ver .bar-menu {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    margin-top: 3px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bar-menu span {
+    background-color: var(--yellow);
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bar-menu .line-1 {
+    transform: translate(-50%, -10px);
+    transition: 0.5s;
+}
+
+.bar-menu .line-3 {
+    transform: translate(-50%, 6px);
+    transition: 0.5s;
+}
+
+.openmenu .line-1 {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.5s;
+}
+
+.openmenu .line-3 {
+    transform: translate(-50%, -50%) rotate(45deg); 
+    transition: 0.5s;
+}
+
+.openmenu .line-2 {
+    opacity: 0;
+}
+
+.list {
+    width: 100%;
+    background-color: var(--green);
+    position: absolute;
+    margin-top: 20px;
+    left: 0;
+    cursor: auto;
+    display: none;
+    box-shadow: 0 3px 5px black;
+}
+
+.openmenu .list {
+    display: inline-block;
+}
+
+.closemenu .list {
+    display: none;
+}
+
+.list-item {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.list-item li a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--teal);
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}
+
+.list-item li a:hover, .list-item li a:focus {
+    background-color: var(--yellow);
+}
+
+.pendaftaran {
+    margin-top: 30px;
+    margin-bottom: -10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+}
+
+.pendaftaran .login {
+    background-color: var(--teal);
+    color: var(--green);
+}
+
+.pendaftaran .register {
+    background-color: var(--teal);
+    color: var(--green);
+}
+
+.pendaftaran .login:hover {
+    background-color: var(--yellow);
+    color: var(--teal);
+}
+
+.pendaftaran .register:hover {
+    background-color: var(--yellow);
+    color: var(--teal);
+}
+
+.judul {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: var(--yellow);
+}
+
+.nav-hor {
+    list-style-type: none;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+    padding: 0;
+}
+
+.nav-hor li {
+    display: inline;
+}
+
+.nav-hor a {
+    text-decoration: none;
+    color: var(--yellow);
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    height: 60px;
+    padding: 0 10px;
+    padding-top: 20px;
+}
+
+.nav-hor a:hover, .nav-hor a:focus {
+    background-color: var(--green);
+}
+
+@media screen and (max-width: 776px) {
+    .nav-ver {
+        display: inline-block;
+    }
+
+    .nav-hor {
+        display: none;
+    }
+}
+
+.login {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--teal);
+    width: 90px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 7px;
+    background-color: var(--yellow);
+    position: relative;
+    margin-left: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-right: 10px;
+}
+
+.login:hover {
+    background-color: var(--green);
+    color: var(--yellow);
+}
+
+.register {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    color: var(--teal);
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 7px;
+    background-color: var(--yellow);
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-right: 10px;
+}
+
+.register:hover {
+    background-color: var(--green);
+    color: var(--yellow);
+}
+
+@media screen and (max-width: 480px) {
+    .login, .register {
+        display: none;
+    }
+
+    .pendaftaran {
+        display: inline-block;
+    }
+
+    .pendaftaran .login, .pendaftaran .register {
+        display: inline-block;
+    }
+}
+
+/* akhir atas */
+
+.tengah {
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.data {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    z-index: -1;
+}
+
+.data >div {    
+    background-image: linear-gradient(to bottom right, var(--green), var(--yellow));
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
+    margin: 10px;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.data div h2 {
+    font-size: 28px;
+    color: var(--teal);
+    height: 22px;
+    position: absolute;
+    margin-top: 2px;
+}
+
+.data div h1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    margin-top: 7px;
+    color: var(--teal);
+}
+
+@media screen and (max-width: 776px) {
+    .data {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    }
+}
