@@ -73,7 +73,7 @@ body {
         left: 0;
         margin-left: 10px;
         cursor: pointer;
-        margin-bottom: 3px;
+        margin-bottom: 4px;
     }
 
     #icon span {
@@ -135,7 +135,7 @@ body {
     font-size: 20px;
     margin: 5px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 #login {

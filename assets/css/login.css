@@ -142,6 +142,26 @@ p.register a {
     font-weight: 300;
     text-decoration: none;
     place-self: center;
-    position: absolute;
-    bottom: 105px;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .kotak {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .login button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    p.register {
+        margin-top: 10px;
+    }
+
+    .kotak .kebijakan {
+        margin-top: 5px;
+    }
 }
