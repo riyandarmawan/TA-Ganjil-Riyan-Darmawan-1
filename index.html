@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengaduan</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,32 +12,25 @@
 <body>
     <div class="keseluruhan">
         <div class="atas">
-            <div class="nav-ver" id="bar-menu">
-                <div class="bar-menu">
+            <h1 class="judul">Pengaduan</h1>
+            <div class="navbar" id="show">
+                <div id="icon" onclick="tampilkan()">
                     <span class="line-1"></span>
                     <span class="line-2"></span>
                     <span class="line-3"></span>
                 </div>
-                <div class="list" id="list">
-                    <ul class="list-item">
-                        <li><a href="#">Beranda</a></li>
-                        <li><a href="#">Profil</a></li>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
                         <li><a href="#">Cara mengajukan</a></li>
+                        <li><a href="#">Tentang kami</a></li>
                     </ul>
-                    <div class="pendaftaran">
-                        <a href="/login/login.html" class="login">Login</a>
-                        <a href="#register" class="register">Register</a>
-                    </div>
+                </nav>
+                <div class="pendaftaran">
+                    <a href="login.html" id="login">Login</a>
+                    <a href="#" id="register">Register</a>
                 </div>
             </div>
-            <h1 class="judul">Pengaduan</h1>
-            <ul class="nav-hor">
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Profil</a></li>
-                <li><a href="#">Cara mengajukan</a></li>
-            </ul>
-            <a href="/login/login.html" class="login">Login</a>
-            <a href="#register" class="register">Register</a>
         </div>
 
         <div class="tengah" id="tengah">

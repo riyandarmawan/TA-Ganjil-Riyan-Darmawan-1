@@ -26,130 +26,7 @@ body {
     box-shadow: 0 0 5px black;
     position: fixed;
     top: 0;
-}
-
-.nav-ver {
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-    cursor: pointer;
-    display: none;
-}
-
-.nav-ver .bar-menu {
-    width: 30px;
-    height: 30px;
-    margin: 2px;
-    margin-top: 3px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.bar-menu span {
-    background-color: var(--yellow);
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.bar-menu .line-1 {
-    transform: translate(-50%, -10px);
-    transition: 0.5s;
-}
-
-.bar-menu .line-3 {
-    transform: translate(-50%, 6px);
-    transition: 0.5s;
-}
-
-.openmenu .line-1 {
-    transform: translate(-50%, -50%) rotate(-45deg);
-    transition: 0.5s;
-}
-
-.openmenu .line-3 {
-    transform: translate(-50%, -50%) rotate(45deg); 
-    transition: 0.5s;
-}
-
-.openmenu .line-2 {
-    opacity: 0;
-}
-
-.list {
-    width: 100%;
-    background-color: var(--green);
-    position: absolute;
-    margin-top: 20px;
-    left: 0;
-    cursor: auto;
-    display: none;
-    box-shadow: 0 3px 5px black;
-}
-
-.openmenu .list {
-    display: inline-block;
-}
-
-.closemenu .list {
-    display: none;
-}
-
-.list-item {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.list-item li a {
-    font-size: 16px;
-    text-decoration: none;
-    color: var(--teal);
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    padding-top: 10px;
-    border-bottom: 1px solid black;
-}
-
-.list-item li a:hover, .list-item li a:focus {
-    background-color: var(--yellow);
-}
-
-.pendaftaran {
-    margin-top: 30px;
-    margin-bottom: -10px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: none;
-}
-
-.pendaftaran .login {
-    background-color: var(--teal);
-    color: var(--green);
-}
-
-.pendaftaran .register {
-    background-color: var(--teal);
-    color: var(--green);
-}
-
-.pendaftaran .login:hover {
-    background-color: var(--yellow);
-    color: var(--teal);
-}
-
-.pendaftaran .register:hover {
-    background-color: var(--yellow);
-    color: var(--teal);
+    z-index: 0;
 }
 
 .judul {
@@ -162,100 +39,143 @@ body {
     color: var(--yellow);
 }
 
-.nav-hor {
-    list-style-type: none;
-    margin: 0;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 30px;
-    padding: 0;
+.navbar {
+    display: grid;
+    align-items: center;
+    margin-left: 20px;
 }
 
-.nav-hor li {
-    display: inline;
+.navbar li {
+    display: inline-block;
 }
 
-.nav-hor a {
+.navbar nav ul li a {
     text-decoration: none;
     color: var(--yellow);
-    text-align: center;
-    font-size: 16px;
-    display: inline-block;
+    font-size: 18px;
+    display: block;
     height: 60px;
-    padding: 0 10px;
-    padding-top: 20px;
+    padding: 20px;
 }
 
-.nav-hor a:hover, .nav-hor a:focus {
+.navbar nav ul li a:hover, .navbar nav ul li a:focus {
     background-color: var(--green);
 }
 
-@media screen and (max-width: 776px) {
-    .nav-ver {
+@media screen and (max-width: 960px) {
+    .judul {
+        margin-left: 50px;
+    }
+
+    #icon {
+        width: 30px;
+        position: absolute;
+        left: 0;
+        margin-left: 10px;
+        cursor: pointer;
+        margin-bottom: 3px;
+    }
+
+    #icon span {
+        background-color: var(--yellow);
+        width: 100%;
+        height: 5px;
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        transition: 0.4s;
+    }
+
+    .buka-menu #icon .line-1 {
+        transform: translate(0, 5px) rotate(45deg);
+    }
+
+    .buka-menu #icon .line-2 {
+        display: none;
+    }
+
+    .buka-menu #icon .line-3 {
+        transform: translate(0, -5px) rotate(-45deg);
+    }
+
+    .navbar nav {
+        background-color: var(--teal);
+        position: absolute;
+        margin-top: 240px;
+        width: 100%;
+        left: 0;
+        box-shadow: 0 5px 5px -3px black;
+        display: none;
+    }
+
+    .buka-menu nav {
         display: inline-block;
     }
 
-    .nav-hor {
-        display: none;
+    .navbar nav li {
+        display: block;
+    }
+
+    .navbar nav li a {
+        text-align: center;
+    }
+
+    .navbar nav li a:hover, .navbar nav li a:focus {
+        background-color: var(--green);
     }
 }
 
-.login {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    color: var(--teal);
-    width: 90px;
-    height: 40px;
-    border-radius: 20px;
-    text-align: center;
-    padding-top: 7px;
-    background-color: var(--yellow);
-    position: relative;
-    margin-left: auto;
-    top: 50%;
-    transform: translate(0, -50%);
-    margin-right: 10px;
+.pendaftaran {
+    position: absolute;
+    right: 10px;
 }
 
-.login:hover {
+.pendaftaran a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#login {
+    color: var(--yellow);
+}
+
+#register {
+    color: var(--teal);
+    background-color: var(--yellow);
+}
+
+#login:hover, #login:focus {
     background-color: var(--green);
     color: var(--yellow);
 }
 
-.register {
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    color: var(--teal);
-    width: 110px;
-    height: 40px;
-    border-radius: 20px;
-    text-align: center;
-    padding-top: 7px;
-    background-color: var(--yellow);
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-    margin-right: 10px;
-}
-
-.register:hover {
+#register:hover, #register:focus {
     background-color: var(--green);
     color: var(--yellow);
 }
 
 @media screen and (max-width: 480px) {
-    .login, .register {
-        display: none;
+    .navbar {
+        display: flex;
+    }
+
+    .navbar nav {
+        top: -180px;
+        height: 240px;
     }
 
     .pendaftaran {
-        display: inline-block;
+        top: 240px;
+        display: none;
+        width: 100%;
     }
-
-    .pendaftaran .login, .pendaftaran .register {
-        display: inline-block;
+    
+    .buka-menu .pendaftaran {
+        display: inline-flex;
+        justify-content: center;
     }
 }
 

@@ -1,7 +1,7 @@
-let menu = document.getElementById("bar-menu");
+let menu = document.getElementById("show");
 
-menu.onclick = function() {
-    menu.classList.toggle("openmenu");
+function tampilkan() {
+    menu.classList.toggle("buka-menu");
 }
 
 let munculinAngka = document.querySelectorAll(".nomor");
