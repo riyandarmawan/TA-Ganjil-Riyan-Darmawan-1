@@ -1,0 +1,39 @@
+/*# sourceMappingURL=style.css.map */
+:root {
+    --primary: #AEDEFC;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    --bs-body-font-family: 'Roboto', sans-serif;
+}
+
+/* navbar start */
+.navbar.navbar-expand-lg {
+    background-color: var(--primary);
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar-toggler iconify-icon {
+    font-size: 2rem;
+}
+
+.navbar-toggler iconify-icon:hover {
+    color: rgb(148, 147, 147);
+}
+
+.dropdown .dropdown-toggle::after {
+    vertical-align: 0.1em;
+    margin-left: 0.1em;
+}
+/* navbar end */
