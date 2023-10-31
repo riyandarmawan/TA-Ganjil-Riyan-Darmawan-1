@@ -1,13 +1,20 @@
-const navbar = document.querySelector(".navbar");
-const buttonNavbar = document.querySelector(".navbar-toggler");
-const collapse = document.getElementById("navbarNavDropdown");
+const dropdown = document.querySelector('.dropdown');
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownItem = document.querySelector('.dropdown-item');
 
-document.addEventListener("click", function (e) {
-  if (
-    !navbar.contains(e.target) &&
-    !buttonNavbar.contains(e.target) &&
-    !collapse.contains(e.target)
-  ) {
-    collapse.classList.remove("show");
-  }
+dropdownToggle.addEventListener('click', (e) => {
+    if(!dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.toggle('show');
+    }
+})
+
+document.addEventListener('click', (e) => {
+    if (
+        !dropdownToggle.contains(e.target) &&
+        !dropdownMenu.contains(e.target) &&
+        !dropdownItem.contains(e.target)
+    ) {
+        dropdownMenu.classList.remove('show');
+    }
 });
