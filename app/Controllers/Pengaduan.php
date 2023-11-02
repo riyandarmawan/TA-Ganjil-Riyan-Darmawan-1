@@ -6,6 +6,6 @@ class Pengaduan extends BaseController
 {
     public function index(): string
     {
-        return view('pages/home/index');
+        return view('pages/home/home');
     }
 }

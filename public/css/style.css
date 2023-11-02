@@ -1,6 +1,8 @@
 :root {
     --primary: #15cef5;
     --secondary: #15b4d4;
+    --process: #ffae00;
+    --finished: #00df0b;
 }
 
 * {
@@ -14,6 +16,7 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    min-height: 2000px;
 }
 
 /* header start */
@@ -51,6 +54,7 @@ body {
     font-size: 2rem;
     margin-left: 0.25rem;
     font-weight: 700;
+    width: fit-content;
 }
 
 .header .navbar {
@@ -98,7 +102,8 @@ body {
     color: white;
 }
 
-.header .navbar .dropdown .arrow:hover + .dropdown-menu, .header .navbar .dropdown .dropdown-menu:hover {
+.header .navbar .dropdown .arrow:hover + .dropdown-menu,
+.header .navbar .dropdown .dropdown-menu:hover {
     display: block;
 }
 
@@ -107,12 +112,12 @@ body {
 }
 
 .header .registration {
-    font-size: 1.1rem;
     font-weight: 500;
 }
 
 .header .registration .login {
     margin-right: 0.5rem;
+    font-size: 1.1rem;
 }
 
 .header .registration .register {
@@ -121,6 +126,7 @@ body {
     color: white;
     padding: 0.6rem 1rem;
     border-radius: 2rem;
+    font-size: 1.1rem;
 }
 
 .header .registration .register:hover {
@@ -128,11 +134,120 @@ body {
 }
 /* header end */
 
+/* home start */
+.home {
+    padding: 4rem 3% 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+}
+
+.home .content > div {
+    flex: 50%;
+}
+
+.home .content .greeting h2 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+    line-height: 3.5rem;
+}
+
+.home .content .greeting h2 span {
+    color: var(--primary);
+}
+
+.home .content .greeting p {
+    font-size: 1.4rem;
+    margin: 1rem 0 1.5rem;
+    max-width: 90%;
+}
+
+.home .content .greeting a {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.home .content .greeting a:hover {
+    background-color: var(--secondary);
+}
+
+.home .content > img {
+    flex: 40%;
+}
+/* home end */
+
+/* about section start */
+.about {
+    padding: 7rem 3% 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about > img {
+    flex: 30%;
+}
+
+.about > .content {
+    flex: 60%;
+}
+
+.about .content h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about .content h2 span {
+    color: var(--primary);
+}
+
+.about .content .explanation p {
+    text-align: justify;
+    text-indent: 4rem;
+    font-size: 1.3rem;
+    margin: .5rem 0;
+    line-height: 2rem;
+}
+/* about section end */
+
 /* media queries */
+@media (max-width: 1920) {
+    html {
+        font-size: 110%;
+    }
+
+    .home .content img {
+        width: 110%;
+    }
+}
+
 /* Laptop */
 @media (max-width: 1400px) {
     html {
-        font-size: 85%;
+        font-size: 90%;
+    }
+
+    .home .content img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 80%;
+    }
+
+    .home .content img {
+        width: 80%;
     }
 }
 
@@ -142,6 +257,7 @@ body {
         font-size: 70%;
     }
 
+    /* header start */
     .header .header-left .hamburger-menu {
         display: block;
     }
@@ -156,14 +272,15 @@ body {
         box-shadow: 0.2rem 0 5px -0.15rem gray;
         display: block;
         padding: 0 1rem;
-        transition: .3s;
+        transition: 0.3s;
     }
 
     .header .navbar.show {
         left: 0;
     }
 
-    .header .navbar a, .header .navbar span {
+    .header .navbar a,
+    .header .navbar span {
         color: black;
     }
 
@@ -177,7 +294,8 @@ body {
         margin: 1rem 0;
     }
 
-    .header .navbar .dropdown .arrow:hover + .dropdown-menu, .header .navbar .dropdown .dropdown-menu:hover {
+    .header .navbar .dropdown .arrow:hover + .dropdown-menu,
+    .header .navbar .dropdown .dropdown-menu:hover {
         display: none;
     }
 
@@ -190,11 +308,53 @@ body {
     .header .navbar > a {
         margin: 1rem 0 !important;
     }
+    /* header end */
+
+    /* home start */
+    .home {
+        align-items: baseline;
+    }
+
+    .home .content {
+        flex-direction: column-reverse;
+    }
+
+    .home .content > div {
+        flex: 100%;
+    }
+
+    .home .content .greeting {
+        text-align: center;
+    }
+
+    .home .content .greeting p {
+        max-width: 100%;
+    }
+
+    .home .content img {
+        width: 50%;
+    }
+    /* home end */
+
+    /* about start */
+    .about {
+        flex-direction: column;
+        padding-top: 2.5rem;
+    }
+
+    .about img {
+        width: 40%;
+    }
+    /* about end */
 }
 
 /* Mobile Phone */
 @media (max-width: 576px) {
     html {
         font-size: 55%;
+    }
+
+    .home .content img {
+        width: 60%;
     }
 }

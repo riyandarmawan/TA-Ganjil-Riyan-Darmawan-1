@@ -13,9 +13,9 @@
                 arrow_drop_down
             </span>
             <div class="dropdown-menu">
-                <a href="#">Beranda</a>
-                <a href="#">Tentang Pengaduan</a>
-                <a href="#">Statistik Pengaduan</a>
+                <a href="#home">Beranda</a>
+                <a href="#about">Tentang Pengaduan</a>
+                <a href="#statistic">Statistik Pengaduan</a>
                 <a href="#">Cara Mengajukan</a>
                 <a href="#">Ajukan Pengaduan</a>
                 <a href="#">Kontak Kami</a>
