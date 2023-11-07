@@ -1,0 +1,529 @@
+:root {
+    --primary: #15cef5;
+    --secondary: #15b4d4;
+    --process: #ffae00;
+    --finished: #00df0b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    min-height: 3000px;
+}
+
+/* header start */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3%;
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 0.2rem 5px -0.15rem gray;
+}
+
+.header * {
+    color: white;
+}
+
+.header .header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-left .hamburger-menu {
+    font-size: 2rem;
+    margin-right: 0.25rem;
+    cursor: pointer;
+    display: none;
+}
+
+.header .header-left a {
+    font-size: 2rem;
+    margin-left: 0.25rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.header .navbar a {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.header .navbar .dropdown {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+
+.header .navbar .dropdown span {
+    cursor: pointer;
+}
+
+.header .navbar .dropdown .dropdown-menu {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 0.3rem black;
+    border-radius: 0.3rem;
+    top: 3.1rem;
+    display: none;
+}
+
+.header .navbar .dropdown .show {
+    display: block !important;
+}
+
+.header .navbar .dropdown .dropdown-menu a {
+    display: block;
+    color: black;
+    padding: 0.5rem;
+}
+
+.header .navbar .dropdown .dropdown-menu a:hover,
+.header .navbar .dropdown .dropdown-menu a:focus {
+    background-color: var(--primary);
+    color: white;
+}
+
+.header .navbar .dropdown .arrow:hover + .dropdown-menu,
+.header .navbar .dropdown .dropdown-menu:hover {
+    display: block;
+}
+
+.header .navbar .user {
+    margin-left: 0.5rem;
+}
+
+.header .registration {
+    font-weight: 500;
+}
+
+.header .registration .login {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.header .registration .register {
+    margin-left: 0.5rem;
+    border: 2px solid white;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+
+.header .registration .register:hover {
+    background-color: var(--secondary);
+}
+/* header end */
+
+/* home start */
+.home {
+    padding: 6rem 3% 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+}
+
+.home .content > div {
+    flex: 50%;
+}
+
+.home .content .greeting h2 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+    line-height: 3.5rem;
+}
+
+.home .content .greeting h2 span {
+    color: var(--primary);
+}
+
+.home .content .greeting p {
+    font-size: 1.4rem;
+    margin: 1rem 0 1.5rem;
+    max-width: 90%;
+}
+
+.home .content .greeting a {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.home .content .greeting a:hover {
+    background-color: var(--secondary);
+}
+
+.home .content > img {
+    flex: 40%;
+}
+/* home end */
+
+/* about section start */
+.about {
+    padding: 7rem 3% 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about > img {
+    flex: 30%;
+}
+
+.about > .content {
+    flex: 60%;
+}
+
+.about .content h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.about .content h2 span {
+    color: var(--primary);
+}
+
+.about .content .explanation p {
+    text-align: justify;
+    text-indent: 4rem;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    line-height: 2rem;
+}
+/* about section end */
+
+/* statistics section start */
+.statistics {
+    padding: 6rem 3% 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.statistics h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.statistics h2 span {
+    color: var(--primary);
+}
+
+.statistics .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap
+}
+
+.statistics .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding: 0.5rem;
+    border-bottom: none;
+    margin: 2rem 2rem .5rem;
+}
+
+.statistics .content div:nth-child(1) {
+    border: 2px solid var(--primary);
+    border-bottom: 1rem solid var(--primary);
+    color: var(--primary);
+}
+
+.statistics .content div:nth-child(2) {
+    border: 2px solid var(--process);
+    border-bottom: 1rem solid var(--process);
+    color: var(--process);
+}
+
+.statistics .content div:nth-child(3) {
+    border: 2px solid var(--finished);
+    border-bottom: 1rem solid var(--finished);
+    color: var(--finished);
+}
+
+.statistics .content div span {
+    font-size: 2.5rem;
+}
+
+.statistics .content div h3 {
+    font-size: 2rem;
+}
+
+.statistics .content div h4 {
+    font-size: 1.5rem;
+}
+
+.statistics .content div > div {
+    width: 100%;
+    height: 1rem;
+}
+/* statistics section end */
+
+/* how section start */
+.how {
+    padding: 6rem 3% 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.how .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how .content > h2 {
+    margin: 0 0 .5rem;
+}
+
+.how .content > h2 span {
+    color: var(--primary);
+}
+
+.how .content p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.how .content ol {
+	list-style: none;
+	counter-reset: list;
+	padding: 0 1rem;
+}
+
+.how .content li {
+	--stop: calc(100% / var(--length) * var(--i));
+	--l: 62%;
+	--l2: 88%;
+	--h: calc((var(--i) - 1) * (180 / var(--length)));
+	--c1: hsl(var(--h), 71%, var(--l));
+	--c2: hsl(var(--h), 71%, var(--l2));
+
+	position: relative;
+	counter-increment: list;
+	max-width: 45rem;
+	margin: 2rem auto;
+	padding: 2rem 1rem 1rem;
+	box-shadow: 0.1rem 0.1rem 1.5rem rgba(0, 0, 0, 0.3);
+	border-radius: 0.25rem;
+	overflow: hidden;
+	background-color: white;
+}
+
+.how .content li::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to right, var(--c1) var(--stop), var(--c2) var(--stop));
+}
+
+.how .content h3 {
+	display: flex;
+	align-items: center;
+	margin: 0 0 rem;
+	color: rgb(70 70 70);
+}
+
+.how .content h3::before {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 auto;
+	margin-right: 1rem;
+	width: 3rem;
+	height: 3rem;
+	content: counter(list);
+	padding: 1rem;
+	border-radius: 50%;
+	background-color: var(--c1);
+	color: white;
+}
+/* how section end */
+
+/* media queries */
+@media (max-width: 1920) {
+    html {
+        font-size: 110%;
+    }
+
+    .home .content img {
+        width: 110%;
+    }
+}
+
+/* Laptop */
+@media (max-width: 1400px) {
+    html {
+        font-size: 90%;
+    }
+
+    .home .content img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 80%;
+    }
+
+    .home .content img {
+        width: 80%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 70%;
+    }
+
+    /* header start */
+    .header .header-left .hamburger-menu {
+        display: block;
+        margin-right: 1rem;
+    }
+
+    .header .navbar {
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        width: 25rem;
+        top: 100%;
+        left: -100%;
+        box-shadow: 0.2rem 0 5px -0.15rem gray;
+        display: block;
+        padding: 0 1rem;
+        transition: 0.3s;
+    }
+
+    .header .navbar.show {
+        left: 0;
+    }
+
+    .header .navbar a,
+    .header .navbar span {
+        color: black;
+    }
+
+    .header .navbar a {
+        font-size: 1.3rem;
+    }
+
+    .header .navbar .dropdown {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+
+    .header .navbar .dropdown .arrow:hover + .dropdown-menu,
+    .header .navbar .dropdown .dropdown-menu:hover {
+        display: none;
+    }
+
+    .header .navbar .dropdown .dropdown-menu {
+        position: relative;
+        top: 0;
+        flex: 100%;
+    }
+
+    .header .navbar > a {
+        margin: 1rem 0 !important;
+    }
+    /* header end */
+
+    /* home start */
+    .home {
+        align-items: baseline;
+        padding-top: 4rem;
+    }
+
+    .home .content {
+        flex-direction: column-reverse;
+    }
+
+    .home .content > div {
+        flex: 100%;
+    }
+
+    .home .content .greeting {
+        text-align: center;
+    }
+
+    .home .content .greeting p {
+        max-width: 100%;
+    }
+
+    .home .content img {
+        width: 50%;
+    }
+    /* home end */
+
+    /* about start */
+    .about {
+        flex-direction: column;
+        padding: 2rem 5% 1rem;
+    }
+
+    .about img {
+        width: 60%;
+    }
+    /* about end */
+}
+
+/* Mobile Phone */
+@media (max-width: 576px) {
+    html {
+        font-size: 70%;
+    }
+
+    .home .content img {
+        width: 60%;
+    }
+
+    /* how section start */
+    /* how section end */
+}
